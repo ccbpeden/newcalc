@@ -1,0 +1,19 @@
+#story {
+  display: none;
+}
+
+.sender {
+  text-align: right
+}
+
+.salutation {
+  text-align: left
+}
+
+.letterbody {
+  text-align: left
+}
+
+.valedictory {
+  text-align: left
+}
