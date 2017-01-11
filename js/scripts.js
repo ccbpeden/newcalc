@@ -17,11 +17,24 @@ var divide = function(number1, number2){
 };
 
 //Everything below this line is user interface logic:
-$(document).ready(function()) {
-	var number1 = parseInt(prompt("Enter a number:"));
-	var number2 = parseInt(prompt("Enter another number:"));
+$(document).ready(function() {
+	$("form#add").submit(function(event) {
+		event.preventDefault();
+		var number1 = parseInt($("#add1").val());
+		var number2 = parseInt($("#add2").val());
+		var result = add(number1, number2);
+		$("#addoutput").text(result);
+	});
+});
 
-	alert("Add:" + add(number1, number2));
+$(document).ready(function() {
+	$("form#subtract").submit(function(event) {
+		event.preventDefault();
+		var number1 = parseInt($("#subtract1").val());
+		var number2 = parseInt($("#subtract2").val());
+		var result = subtract(number1, number2);
+		$("#subtractoutput").text(result);
+	});
 });
 
 // alert("Subtract:" + subtract(number1, number2));
